@@ -1,0 +1,39 @@
+body {
+    background-color: #FEF4DF;
+    
+}
+
+.intro {
+    width: 40vw;
+    height: 20vh;
+}
+
+h1 { 
+    font-size: 6vw;
+    color: #6DC3C5;
+    font-family: cursive; 
+
+    position: absolute;
+    top: 14vw;
+    left: 48vw;
+    margin: 0;
+}
+
+
+
+/*
+position: static; is for default when you want to keep the element sittign naturaly (for example normal paragraphs) (this is default, so most of the time you dont have to specify this)
+poition: absolute; is for when you want to position the element in a specific place on the page (for example a title or a button)
+position: relative; (inbetween the two) is for when you want to position the element in a specific place but still want it to be part of the normal flow of the page (for example a card or a box)
+position: fixed; is for when you want to position the element in a specific place on the page and you want it to stay there even when you scroll (for example a navbar or a footer)
+*/
+
+
+
+
+
+
+
+
+
+
