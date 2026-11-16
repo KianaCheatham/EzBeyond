@@ -1,32 +1,89 @@
+
+/* styling for the nave bar*/
+header {  /* styles the <header> section */
+  position: relative;  /* lets things inside the header be placed with top/left */
+  height: 14vw;  /* header height; vw = percent of window width, so it scales */
+  background-color: #2B6B63;  /* dark teal background */
+}
+
+/* the gold line running across the bar */
+header::before {  /* ::before creates an extra decorative piece inside the header */
+  content: "";  /* required for ::before to show up; empty because it's just a shape */
+  position: absolute;  /* lets us place it exactly with top/left */
+  top: 9.4vw;  /* distance down from the top of the header */
+  left: 0;  /* starts at the left edge */
+  width: 100%;  /* stretches all the way across */
+  height: 0.6vw;  /* thickness of the line */
+  background-color: #E8BE5A;  /* gold color */
+}
+
+.logo {  /* the . means "anything with class='logo'" */
+  position: absolute;  /* lets us place it with top/left */
+  top: 0.8vw;  /* distance from the top of the header */
+  left: 14vw;  /* distance from the left edge */
+  width: 12.5vw;  /* logo size; height adjusts automatically */
+  border-radius: 50%;  /* rounds the corners all the way, making a circle */
+  z-index: 2;  /* higher number = stacks on top, so it sits above the gold line */
+}
+
+nav {  /* styles the <nav> group of links */
+  position: absolute;  /* lets us place it with top/left */
+  top: 0;  /* sits at the very top of the header */
+  left: 34.5vw;  /* distance from the left edge */
+  display: flex;  /* lines the links up in a row instead of stacking them */
+  gap: 1.4vw;  /* space between each button */
+}
+
+nav a {  /* styles every link inside the nav */
+  width: 12.5vw;  /* button width */
+  height: 12vw;  /* button height */
+  box-sizing: border-box;  /* makes the border count inside the width/height instead of adding to it */
+  border: 0.5vw solid #E8BE5A;  /* gold outline around the button */
+  border-top: none;  /* removes the top outline so the button hangs from the top edge */
+  border-radius: 0 0 4vw 4vw;  /* corner rounding: top-left, top-right, bottom-right, bottom-left (only the bottom ones are rounded) */
+  background-color: #2B6B63;  /* dark teal button color */
+  color: #FEF4DF;  /* cream text color */
+  text-decoration: none;  /* removes the default underline on links */
+  font-family: cursive;  /* handwritten-style font */
+  font-size: 2.6vw;  /* text size */
+  display: flex;  /* turns on flex so we can center the text */
+  /*dont have to put flex-direction: horizontal because that is the default for flex*/
+  align-items: center;  /* centers the text up and down */
+  justify-content: center;  /* centers the text side to side */
+}
+
+
+
+
+
+
+
+
+/*styling for the body of the page*/
 body {
     background-color: #FEF4DF;
-    
-}
-
-.intro {
-    width: 40vw;
-    height: 20vh;
-}
-
-h1 { 
-    font-size: 6vw;
-    color: #6DC3C5;
-    font-family: cursive; 
-
-    position: absolute;
-    top: 14vw;
-    left: 48vw;
     margin: 0;
 }
 
+.intro {
+    position: absolute;
+    top: 15vw;
+    left: 7vw;
+    width: 63vw;
+}
+
+h1 { 
+  position: absolute;
+  top: 14vw;
+  left: 48vw;
+  margin: 0;
+  font-family: cursive;
+  font-weight: normal;
+  font-size: 6vw;
+  color: #7FD1BF;
+}
 
 
-/*
-position: static; is for default when you want to keep the element sittign naturaly (for example normal paragraphs) (this is default, so most of the time you dont have to specify this)
-poition: absolute; is for when you want to position the element in a specific place on the page (for example a title or a button)
-position: relative; (inbetween the two) is for when you want to position the element in a specific place but still want it to be part of the normal flow of the page (for example a card or a box)
-position: fixed; is for when you want to position the element in a specific place on the page and you want it to stay there even when you scroll (for example a navbar or a footer)
-*/
 
 
 
